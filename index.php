@@ -1,7 +1,7 @@
 <?php 
     // inizializzazione variabile paragrafo
-    $paragraph = 'Non posso dire questo perchè questo è censurato';
-
+    $paragraph = 'Non posso dire questo perchè questo è censurato.';
+    
     // parametro get per passare stringa da censurare
     $badword = $_GET['badword'];
 
@@ -13,8 +13,8 @@
 <p><?php echo $paragraph;?></p>
 
 <!-- stampo a schermo la lunghezza della stringa -->
-<p>La lunghezza del titolo qui sopra è di <?php  echo strlen($paragraph);?> </p>
+<p>La lunghezza del paragrafo qui sopra è di <?php echo strlen($paragraph) - 2;?> battute.</p>
 
 <!--  ristampo a schermo stringa censurata -->
-<p><?php echo $replace_paragraph;?> </p>
+<p><?php echo $replace_paragraph;?></p>
 
